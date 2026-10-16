@@ -19,7 +19,7 @@ st.write("The name will be", name_of_order)
 cnx= st.connection("snowflake")
 session= cnx.session()
 
-my_dataframe = session.table("SMOOTHIES.PUBLIC.FRUIT_OPTIONS").select(col('Fruit_name')).select(col('Search_on'))
+my_dataframe = session.table("SMOOTHIES.PUBLIC.FRUIT_OPTIONS").select(col('Fruit_name')), (col('Search_on'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 #st.stop()
 pd_df=my_dataframe.to_pandas()
