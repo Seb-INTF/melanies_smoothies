@@ -24,7 +24,6 @@ session= cnx.session()
 
 import requests  
 smoothiefroot_response = requests.get("https://smoothiefroot.com/api/fruit/orange")  
-my_dataframe= 
 st.text(smoothiefroot_response.json()
 
 
