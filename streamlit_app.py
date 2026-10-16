@@ -54,16 +54,6 @@ if time_to_insert:
 
 
 import requests  
-url = "https://my.smoothiefroot.com/api/fruit/watermelon"
+smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
+st.text(smoothiefroot_response)
 
-try:
-    response = requests.get(url, timeout=15)
-
-    st.write("HTTP-Status:", response.status_code)
-    st.text(response.text)
-
-except requests.exceptions.Timeout:
-    st.error("Die API hat nicht rechtzeitig geantwortet.")
-
-except requests.exceptions.RequestException as error:
-    st.error(f"Der API-Aufruf ist fehlgeschlagen: {error}")
