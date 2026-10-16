@@ -24,6 +24,7 @@ session= cnx.session()
 import requests  
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
 st.text(smoothiefroot_response)
+st.write(smoothiefroot_response.json())
 
 
 
