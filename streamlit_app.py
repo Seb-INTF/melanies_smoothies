@@ -18,14 +18,14 @@ st.write("The name will be", name_of_order)
 cnx= st.connection("snowflake")
 session= cnx.session()
 
-#my_dataframe = session.table("SMOOTHIES.PUBLIC.FRUIT_OPTIONS").select(col('FRUIT_NAME'))
-#st.dataframe(data=my_dataframe, use_container_width=True)
+my_dataframe = session.table("SMOOTHIES.PUBLIC.FRUIT_OPTIONS").select(col('FRUIT_NAME'))
+st.dataframe(data=my_dataframe, use_container_width=True)
 
 
-#ingredient_list= st.multiselect(
- #   'Choose up to 5 ingredients',
-    #my_dataframe,
-  #  max_selections=5
+ingredient_list= st.multiselect(
+   'Choose up to 5 ingredients',
+    my_dataframe,
+    max_selections=5
 )
 
 ingredients_string=''
