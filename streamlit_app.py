@@ -58,5 +58,3 @@ if time_to_insert:
     st.success('Your Smoothie is ordered!', icon="✅")
 
 
-)
-
